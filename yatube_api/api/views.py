@@ -5,11 +5,17 @@ from rest_framework import viewsets
 from rest_framework.pagination import LimitOffsetPagination
 
 from api.permission import IsOwnerOrReadOnly
-from api.serializers import CommentSerializer, GroupSerializer, PostSerializer, FollowSerializer
+from api.serializers import (
+    CommentSerializer, GroupSerializer,
+    PostSerializer, FollowSerializer
+)
 from posts.models import Comment, Group, Post, Follow
 
 
-class CreateListViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+class CreateListViewSet(
+    mixins.CreateModelMixin, mixins.ListModelMixin,
+    viewsets.GenericViewSet
+):
     pass
 
 
