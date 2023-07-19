@@ -23,5 +23,3 @@ urlpatterns = [
     path('v1/jwt/verify/', TokenVerifyView.as_view(), name='token_verify'),
 
 ]
-
-
