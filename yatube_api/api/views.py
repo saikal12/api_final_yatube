@@ -3,14 +3,16 @@ from rest_framework import filters
 from rest_framework import mixins
 from rest_framework import viewsets
 from rest_framework.pagination import LimitOffsetPagination
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import (
+    IsAuthenticated, IsAuthenticatedOrReadOnly
+)
 
 from api.permission import IsOwnerOrReadOnly
 from api.serializers import (
     CommentSerializer, GroupSerializer,
     PostSerializer, FollowSerializer
 )
-from posts.models import Comment, Group, Post, Follow
+from posts.models import Comment, Group, Post
 
 
 class CreateListViewSet(
